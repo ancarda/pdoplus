@@ -35,7 +35,7 @@
     "scripts": {
         "analyze": "phpstan analyze",
         "check-style": "phpcs",
-        "check-tests": "infection --min-msi=100",
+        "check-tests": "infection --min-msi=80",
         "fix-style": "phpcbf",
         "test": "phpunit"
     }
