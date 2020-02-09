@@ -1,0 +1,9 @@
+# Exclude per-machine temp files
+build/
+var/
+
+# Exclude Composer check-out
+vendor/
+
+# Exclude PHPStorm / IntelliJ
+.idea/

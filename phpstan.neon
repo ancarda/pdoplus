@@ -1,0 +1,16 @@
+parameters:
+	level: max
+	paths:
+	    - src
+	    - tests
+
+	ignoreErrors:
+	    # PHPStan doesn't like __call
+	    - '%Call to an undefined method Ancarda\\PDOPlus\\ConnectionManager::\w+()%'
+	    - '%Call to an undefined static method Ancarda\\PDOPlus\\Facade\\PDOPlus::\w+()%'
+
+includes:
+	- vendor/phpstan/phpstan-phpunit/extension.neon
+	- vendor/phpstan/phpstan-phpunit/rules.neon
+	- vendor/phpstan/phpstan-strict-rules/rules.neon
+	- vendor/phpstan/phpstan/conf/bleedingEdge.neon
