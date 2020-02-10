@@ -7,7 +7,7 @@ parameters:
 	ignoreErrors:
 	    # PHPStan doesn't like __call
 	    - '%Call to an undefined method Ancarda\\PDOPlus\\ConnectionManager::\w+()%'
-	    - '%Call to an undefined static method Ancarda\\PDOPlus\\Facade\\PDOPlus::\w+()%'
+	    - '%Call to an undefined static method Ancarda\\PDOPlus\\Facade\\\w+::\w+()%'
 
 includes:
 	- vendor/phpstan/phpstan-phpunit/extension.neon
