@@ -5,6 +5,8 @@ declare(strict_types=1);
 namespace Tests;
 
 use Ancarda\PDOPlus\ConnectionManager;
+use Ancarda\PDOPlus\IllegalConnectionNameException;
+use Ancarda\PDOPlus\NoSuchConnectionException;
 use Ancarda\PDOPlus\PDOPlus;
 use PHPUnit\Framework\TestCase;
 
@@ -33,5 +35,22 @@ final class ConnectionManagerTest extends TestCase
             ],
             $connPool->quote(ConnectionManager::APPLY_TO_ALL, '')
         );
+    }
+
+    public function testWillThrowNoSuchConnectionException(): void
+    {
+        $connPool = new ConnectionManager();
+
+        $this->expectException(NoSuchConnectionException::class);
+        $connPool->quote('');
+    }
+
+    public function testWillNotNameConnectionAll(): void
+    {
+        $pdoPlusMock = $this->createMock(PDOPlus::class);
+        $connPool = new ConnectionManager();
+
+        $this->expectException(IllegalConnectionNameException::class);
+        $connPool->addConnection(ConnectionManager::APPLY_TO_ALL, $pdoPlusMock);
     }
 }
