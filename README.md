@@ -4,7 +4,7 @@ _PDO with some extra niceties_
 
 [![Latest Stable Version](https://poser.pugx.org/ancarda/pdoplus/v/stable)](https://packagist.org/packages/ancarda/pdoplus)
 [![Total Downloads](https://poser.pugx.org/ancarda/pdoplus/downloads)](https://packagist.org/packages/ancarda/pdoplus)
-[![License](https://poser.pugx.org/ancarda/pdoplus/license)](https://choosealicense.com/licenses/mit/)
+[![License](https://poser.pugx.org/ancarda/pdoplus/license)](https://choosealicense.com/licenses/agpl-3.0/)
 [![Build Status](https://travis-ci.com/ancarda/pdoplus.svg?branch=master)](https://travis-ci.com/ancarda/pdoplus)
 [![Coverage Status](https://coveralls.io/repos/github/ancarda/pdoplus/badge.svg?branch=master)](https://coveralls.io/github/ancarda/pdoplus?branch=master)
 
